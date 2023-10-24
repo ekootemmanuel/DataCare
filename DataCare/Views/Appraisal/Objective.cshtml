@@ -1,0 +1,48 @@
+﻿@model DataCare.Models.AppraisalObjective
+
+@{
+    ViewData["Title"] = "Objective";
+}
+
+<h1>Objective</h1>
+
+<h4>Appraisal Objectives</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Appraisal" asp-action="CreateObjective" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Employee" class="control-label"></label>
+                <select asp-for="Employee" asp-items="ViewBag.Employees" class="form-control"></select>
+                <span asp-validation-for="Employee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActivityStartDate" class="control-label"></label>
+                <input asp-for="ActivityStartDate" class="form-control" />
+                <span asp-validation-for="ActivityStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActivityEndDate" class="control-label"></label>
+                <input asp-for="ActivityEndDate" class="form-control" />
+                <span asp-validation-for="ActivityEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
