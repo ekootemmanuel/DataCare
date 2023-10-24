@@ -1,5 +1,5 @@
 # DataCare
-This is an Employee management web application 
+This is an Employee management web application built with C#
 
 # It contains the following Functionalities.
 1.	A page where an employee is given a contract
