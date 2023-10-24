@@ -1,7 +1,7 @@
 # DataCare
-This is an Employee management system
+This is an Employee management web application 
 
-# It contain s the following Functionalities.
+# It contains the following Functionalities.
 1.	A page where an employee is given a contract
 2.	A page where employee records are created.
 3.	A page where the appraisal period is setup to be able to do an appraisal
